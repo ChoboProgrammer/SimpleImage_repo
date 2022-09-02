@@ -1,0 +1,111 @@
+@import url('./reset.css');
+@import url('~@fortawesome/fontawesome-free/css/all.min.css');
+
+#slider-wrap{
+  width:1280px;
+  height:400px;
+  margin:40px auto;
+  position:relative;
+  overflow:hidden;
+}
+
+#slider-wrap .slider{
+  height: 100%;
+  transition:0.3s;
+  display:flex;
+}
+
+#slider-wrap .slider li{
+  width: 100%;
+  height: 100%;
+}
+img{
+  height:100%;
+}
+.btn{
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 50%;
+  margin-top: -25px;
+  line-height: 57px;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: 0.15s;
+}
+.btn.next {
+  right: -50px;
+  color: rgb(0, 0, 0);
+}
+.btn.prev {
+  left: -50px;
+  color: rgb(0, 0, 0);
+}
+#slider-wrap:hover .btn.next {
+  right: 0px;
+}
+#slider-wrap:hover .btn.prev {
+  left: 0px;
+}
+.btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+#indicator-wrap {
+  height: 15px;
+  position: absolute;
+  bottom:15px;
+  left:45%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#indicator-wrap ul {
+  width: 100%;
+}
+
+#indicator-wrap ul li {
+  border-radius: 50%;
+  background: #7d7d7c;
+  opacity: 0.5;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin: 0 4px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+#indicator-wrap ul li.active {
+  width: 15px;
+  height: 15px;
+  background:#212121;
+  opacity: 1;
+}
+.control-wrap{
+  bottom:15px;
+  right:50px;
+  width:auto;
+  position:absolute;
+}
+.control-wrap i{
+  cursor:pointer;
+  margin-right:20px;
+}
+.play .fa-play{
+  display:none;
+}
+.play .fa-pause{
+  display:block;
+}
+
+.pause .fa-play {
+  display: block;
+}
+
+.pause .fa-pause {
+  display: none;
+}
